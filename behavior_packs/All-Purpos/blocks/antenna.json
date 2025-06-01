@@ -1,0 +1,84 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "drone:antenna",
+      "menu_category": {
+        "category": "Construction"
+      },
+      "states": {
+        "block:deny": [ false, true ]
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [ "minecraft:cardinal_direction" ],
+          "y_rotation_offset": 180
+        }
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2
+      },
+      "minecraft:light_emission": 3,
+      "minecraft:material_instances": {
+        "*": { "texture": "antenna" }
+      },
+      "minecraft:selection_box": {
+        "origin": [ -5, 0, -5 ],
+        "size": [ 10, 16, 10 ]
+      },
+      "minecraft:custom_components": [
+        "drone:antenna"
+      ],
+      "minecraft:map_color": "#929292",
+
+      "minecraft:geometry": {
+        "identifier": "geometry.antenna"
+      }
+    },
+    "events": { },
+    "permutations": [
+      {
+        "condition": "q.block_state ('block:deny')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": { "texture": "antenna_deny" }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state ('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state ('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, -180, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state ('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 90, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state ('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, -90, 0 ]
+          }
+        }
+      }
+    ]
+  }
+}

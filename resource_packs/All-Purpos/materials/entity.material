@@ -1,0 +1,56 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "outline_base:entity_alphatest": {
+      "+states": [
+        "EnableStencilTest",
+        "StencilWrite"
+      ],
+      "frontFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "backFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "stencilRef": 2
+    },
+    "outline:entity_alphatest": {
+      "+states": [
+        "EnableStencilTest",
+        "InvertCulling"
+      ],
+      "-states": [
+        "DisableCulling"
+      ],
+      "-defines": [
+        "FANCY"
+      ],
+      //"depthFunc": "Always", //through blocks
+      "frontFace": {
+        "stencilFunc": "NotEqual"
+      },
+      "backFace": {
+        "stencilFunc": "Equal"
+      },
+      "stencilRef": 2,
+      "stencilReadMask": 2
+    },
+    "drone_task_rq:entity_alphatest": {
+      "+states": [ "Blending", "DisableCulling" ],
+      "blendSrc": "SourceAlpha",
+      "blendDst": "One",
+      "-states": [
+        "DisableCulling"
+      ],
+      "-defines": [
+        "FANCY"
+      ]
+    }
+  }
+}

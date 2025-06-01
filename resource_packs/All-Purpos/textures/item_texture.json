@@ -1,0 +1,11 @@
+{
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "drone_remote_control": {
+      "textures": "textures/items/drone_remote_control"
+    },
+    "drone_solar_panel": {
+      "textures": "textures/items/drone_solar_panel"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.laser.move" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"rotation" : [ "-q.target_x_rotation", "-q.body_y_rotation", 0.0 ],
+					"scale" : [ 0.7, 0.7, 0.9 ]
+				}
+			}
+		}
+	}
+}

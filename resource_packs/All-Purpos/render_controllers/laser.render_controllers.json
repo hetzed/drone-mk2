@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.laser": {
+      "geometry": "geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "texture.default" ],
+      "light_color_multiplier": 1.5,
+      "filter_lighting": true,
+      "ignore_lighting": true
+    }
+  }
+}

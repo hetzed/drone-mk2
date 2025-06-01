@@ -1,0 +1,87 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "effect99:drone",
+      "materials": {
+        "default": "outline_base",
+        "highlight": "drone_task_rq",
+        "outline": "outline"
+      },
+      "textures": {
+        "state_1": "textures/entity/drone_state_1",
+        "state_2": "textures/entity/drone_state_2",
+        "state_3": "textures/entity/drone_state_3",
+        "state_4": "textures/entity/drone_state_4"
+      },
+      "geometry": {
+        "default": "geometry.drone_multitasking",
+        "outline": "geometry.drone_outline",
+        "eye": "geometry.drone_eye"
+      },
+      "animations": {
+        "float": "animation.drone.float",
+        "holding": "animation.drone.holding",
+        "look_at_target": "animation.drone.eye",
+        "common_look_at_target": "animation.drone.look_at_target",
+        "drone_propulsion": "animation.drone.propulsion",
+        "thruster_move": "animation.drone.thruster",
+        "inclination": "animation.drone.inclination",
+        "lights": "animation.drone.lights",
+        "walk_mode": "animation.drone.walk_mode",
+        "walk": "animation.drone.walk",
+        "drill_move": "animation.drone.drill_mode",
+        "wait": "animation.drone.wait",
+        "wait_walk": "animation.drone.walk_wait",
+        "in_water": "animation.drone.in_water",
+        "bubbles": "animation.drone.bubbles",
+        "panel_on": "animation.drone.panel_on",
+        "panel_off": "animation.drone.panel_off",
+        "solar_panel": "controller.animation.drone.solar_panel"
+      },
+      "particle_effects": {
+        "propulsion": "drone:propulsion",
+        "water_propulsion": "drone:bubbles"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.targetY = q.target_y_rotation;",
+          "v.targetX = q.target_x_rotation;",
+          "v.walk = q.variant == 1 ? q.modified_move_speed * 2 : 0;",
+          "v.thruster = !q.is_in_water && q.variant != 2 && (q.variant == 0 || !q.is_on_ground);",
+          "v.move_speed = q.variant ? 0 : q.modified_move_speed * 1.5;",
+          "v.inclination = q.variant ? 0 : (q.modified_move_speed * 1.5) * (q.is_in_water ? 4 : 1);",
+          "v.common_look = math.abs((q.modified_move_speed >= 0.2 ? 0.2 : q.modified_move_speed) - 0.2) * 5;",
+          "v.outlines = q.property('outline:display');"
+        ],
+        "animate": [
+          { "solar_panel": "q.is_chested" },
+          { "lights": "q.variant != 2" },
+          { "look_at_target": "q.variant != 2" },
+          { "walk": "v.walk" },
+          { "walk_mode": "q.variant > 0" },
+          { "common_look_at_target": "v.common_look" },
+          { "thruster_move": "v.move_speed" },
+          { "inclination": "v.inclination" },
+          { "float": "q.variant == 0" },
+          { "drone_propulsion" : "v.thruster"},
+          { "wait": "q.skin_id == 1 && q.variant == 0"},
+          { "wait_walk": "q.skin_id == 1 && q.variant == 1"},
+          { "in_water": "q.is_in_water && q.mark_variant != 1 && q.mark_variant != 5 && q.variant == 0" },
+          { "bubbles": "q.is_in_water && q.variant == 0" },
+          { "holding": "(v.is_holding_right || q.has_rider) && q.variant != 2" }
+        ]
+      },
+      "render_controllers": [ 
+        "controller.render.drone",
+        "controller.render.drone.eye", 
+        { "controller.render.outline": "v.outlines && q.property('outline:default') <= 10" },
+        { "controller.render.outline.rgb": "v.outlines && q.property('outline:default') == 11" },
+        { "controller.render.outline.xp_orb": "v.outlines && q.property('outline:default') == 12" },
+        { "controller.render.outline.target": "v.outlines && q.property('outline:default') == 13" },
+        { "controller.render.outline.tasksRq": "q.mark_variant == 9" }
+      ],
+      "enable_attachables": true
+    }
+  }
+}

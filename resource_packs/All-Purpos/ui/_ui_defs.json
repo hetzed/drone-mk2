@@ -1,0 +1,6 @@
+{
+  "ui_defs": [
+    "ui/drone_form.json",
+    "ui/drone_inventory.json"
+  ]
+}

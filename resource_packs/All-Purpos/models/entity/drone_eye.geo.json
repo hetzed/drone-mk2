@@ -1,0 +1,143 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.drone_eye",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "drone",
+					"pivot": [0, 6.5, 0]
+				},
+				{
+					"name": "head",
+					"parent": "drone",
+					"pivot": [0, 13, 0]
+				},
+				{
+					"name": "main_head",
+					"parent": "head",
+					"pivot": [0, 13, 0]
+				},
+				{
+					"name": "eye",
+					"parent": "main_head",
+					"pivot": [0, 13, 0]
+				},
+				{
+					"name": "blueScreen",
+					"parent": "eye",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{
+							"origin": [-3, 10, -5.75],
+							"size": [6, 6, 0.75],
+							"uv": {
+								"north": {"uv": [44, 8], "uv_size": [6, 6]},
+								"east": {"uv": [34, 53], "uv_size": [1, 6]},
+								"south": {"uv": [44, 8], "uv_size": [6, 6]},
+								"west": {"uv": [19, 55], "uv_size": [1, 6]},
+								"up": {"uv": [55, 23], "uv_size": [6, 1]},
+								"down": {"uv": [57, 13], "uv_size": [6, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "redScreen",
+					"parent": "eye",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{
+							"origin": [-3, 10, -5.75],
+							"size": [6, 6, 0.75],
+							"uv": {
+								"north": {"uv": [44, 53], "uv_size": [6, 6]},
+								"east": {"uv": [49, 53], "uv_size": [1, 6]},
+								"south": {"uv": [44, 53], "uv_size": [6, 6]},
+								"west": {"uv": [49, 53], "uv_size": [1, 6]},
+								"up": {"uv": [44, 53], "uv_size": [6, 1]},
+								"down": {"uv": [44, 59], "uv_size": [6, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "pupil",
+					"parent": "eye",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "pupilBlue",
+					"parent": "pupil",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1.25, 11.75, -5.8],
+							"size": [2.5, 2.5, 0],
+							"uv": {
+								"north": {"uv": [55, 8], "uv_size": [2, 2]},
+								"east": {"uv": [55, 8], "uv_size": [1, 1]},
+								"south": {"uv": [50, 55], "uv_size": [1, 1]},
+								"west": {"uv": [55, 8], "uv_size": [1, 1]},
+								"up": {"uv": [56, 9], "uv_size": [-1, -1]},
+								"down": {"uv": [56, 9], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "pupilRed",
+					"parent": "pupil",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1.15, 11.85, -5.8],
+							"size": [2.3, 2.3, 0],
+							"uv": {
+								"north": {"uv": [51, 53], "uv_size": [2, 2]},
+								"east": {"uv": [51, 53], "uv_size": [2, 2]},
+								"south": {"uv": [50, 55], "uv_size": [1, 1]},
+								"west": {"uv": [51, 53], "uv_size": [2, 2]},
+								"up": {"uv": [53, 55], "uv_size": [-2, -2]},
+								"down": {"uv": [53, 55], "uv_size": [-2, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "antenna",
+					"parent": "main_head",
+					"pivot": [0, 19.41667, 0]
+				},
+				{
+					"name": "light_red",
+					"parent": "antenna",
+					"pivot": [0, 17, 0],
+					"cubes": [
+						{
+							"origin": [-0.75, 22.25, -0.75],
+							"size": [1.5, 1.5, 1.5],
+							"pivot": [0, 27, 0],
+							"rotation": [0, 180, 0],
+							"uv": {
+								"north": {"uv": [2, 61], "uv_size": [2, 2]},
+								"east": {"uv": [61, 3], "uv_size": [2, 2]},
+								"south": {"uv": [4, 61], "uv_size": [2, 2]},
+								"west": {"uv": [61, 5], "uv_size": [2, 2]},
+								"up": {"uv": [6, 61], "uv_size": [2, 2]},
+								"down": {"uv": [6, 61], "uv_size": [2, 2]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

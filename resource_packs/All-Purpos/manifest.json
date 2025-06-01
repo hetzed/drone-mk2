@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "All-Purpose Drone",
+    "description": "§7By Effect99 §8V1.3",
+    "uuid": "5dce9ac4-861f-48f4-a9d4-492c554d6efc",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 19, 80 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "76cd1570-83b3-4662-bdaa-b470b6267815",
+      "version": [ 1, 0, 0 ]
+    }
+  ],
+  "dependencies": [
+    {
+      "version": [1, 0, 0],
+      "uuid": "08e4a336-d9ea-486b-958a-dd7426a70935"
+    }
+  ]
+}

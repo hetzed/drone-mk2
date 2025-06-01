@@ -1,0 +1,73 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "drone.laser": {
+      "category" : "hostile",
+      "sounds": [
+        { "name": "sounds/drone/laser", "volume": 1, "pitch": 0.9 },
+        { "name": "sounds/drone/laser", "volume": 0.8, "pitch": 0.6 },
+        { "name": "sounds/drone/laser", "volume": 0.6, "pitch": 1 }
+      ]
+    },
+    "drone.hurt": {
+      "category" : "hostile",
+      "sounds": [
+        { "name": "sounds/drone/impact_metal_0", "volume": 1, "pitch": 1 },
+        { "name": "sounds/drone/impact_metal_1", "volume": 1, "pitch": 1 },
+        { "name": "sounds/drone/impact_metal_2", "volume": 1, "pitch": 1 }
+      ]
+    },
+    "drone.ambient": {
+      "category" : "neutral",
+      "sounds": [
+        { "name": "sounds/drone/pip_bot", "volume": 1, "pitch": 1 },
+        { "name": "sounds/drone/tiny_bot_6", "volume": 0.7, "pitch": 1 },
+        { "name": "sounds/drone/tiny_bot_7", "volume": 0.7, "pitch": 1 }
+      ]
+    },
+    "drone.bot": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot" ]
+    },
+    "drone.bot_1": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_1" ]
+    },
+    "drone.bot_2": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_2" ]
+    },
+    "drone.bot_3": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_3" ]
+    },
+    "drone.bot_4": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_4" ]
+    },
+    "drone.bot_5": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_5" ]
+    },
+    "drone.bot_6": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_6" ]
+    },
+    "drone.bot_7": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/tiny_bot_7" ]
+    },
+    "drone.pip": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/pip_bot" ]
+    },
+    "drone.shutdown": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/bot_shutdown" ]
+    },
+    "drone.damaged": {
+      "category": "neutral",
+      "sounds": [ "sounds/drone/bot_movement" ]
+    }
+  }
+}

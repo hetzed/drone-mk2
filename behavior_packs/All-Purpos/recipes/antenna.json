@@ -1,0 +1,32 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "drone:antenna"
+    },  
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " C ",
+      "iri",
+      "iIi"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "r": {
+        "item": "minecraft:redstone"
+      },
+      "i": {
+        "item": "minecraft:iron_ingot"
+      },
+      "I": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "result": {
+      "item": "drone:antenna",
+      "count": 1
+    }
+  }
+}

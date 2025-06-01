@@ -1,0 +1,26 @@
+{
+	"format_version" : "1.17.30",
+	"animation_controllers" : {
+		"controller.animation.drone.solar_panel" : {
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{ "panelOn" : "q.is_sheared" }
+					]
+				},
+				"panelOn" : {
+					"animations": [ { "panel_on": "1.0" } ],
+					"transitions" : [
+						{ "panelOff" : "!q.is_sheared" }
+					]
+				},
+				"panelOff" : {
+					"animations": [ { "panel_off": "1.0" } ],
+					"transitions" : [
+						{ "default" : "q.all_animations_finished" }
+					]
+				}
+			}
+		}
+	}
+}

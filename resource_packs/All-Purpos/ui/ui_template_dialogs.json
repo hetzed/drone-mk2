@@ -1,0 +1,54 @@
+{
+  "namespace": "common_dialogs",
+
+  "drone_main_panel": {
+    "type": "panel",
+    "$title_size": [ "100% - 14px", 10 ],
+    "size": [270, 220],
+    "offset": [ 0, 6 ],
+    "$text_name": "#title_text",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$title_text_binding_type": "none",
+    "$title_binding_condition": "none",
+    "$panel_indent_size|default": [ "100% - 16px", "100% - 31px" ],
+    "$custom_background|default": "dialog_background_drone",
+    "$close_button|default": true,
+    "layer": 2,
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "size": [ 270, 220 ],
+          "layer": 1,
+          "controls": [
+            {
+              "common_panel@common.common_panel": {
+              "$show_close_button": "$close_button",
+              "$dialog_background": "$custom_background"
+              } 
+            },
+            {
+              "title@common_dialogs.standard_title_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 6, -12 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_indent": {
+          "type": "panel",
+          "size": "$panel_indent_size",
+          "offset": [ 0, 23 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

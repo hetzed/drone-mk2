@@ -1,0 +1,77 @@
+{
+  "namespace": "server_form",
+
+  "main_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "server_form_factory": {
+            "type": "factory",
+            "control_ids": {
+              "long_form": "@drone_form.drone_long_form",
+              "custom_form": "@drone_form.drone_custom_form"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "long_form": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "((#title_text - '§e§f§f§e§c§t§U§I') = #title_text)",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "custom_form": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "((#title_text - '§e§f§f§e§c§t§U§I') = #title_text)",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  },
+  "dynamic_button": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not (#form_button_text = ''))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ]
+  }
+}

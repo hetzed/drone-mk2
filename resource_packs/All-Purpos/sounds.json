@@ -1,0 +1,17 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "effect99:drone": {
+        "volume": 1,
+        "pitch": [ 1, 1 ],
+        "events": {
+          "ambient": "drone.ambient",
+          "hurt": "drone.hurt",
+          "death": "random.explode",
+          "shoot": "drone.laser",
+          "step": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "drone:antenna",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [ "initSystem" ]
+      },
+      "animations": {
+        "initSystem": "controller.animation.initSystem"
+      }
+    },
+    "component_groups": {
+      "name_always_show": {
+        "minecraft:nameable": {
+          "always_show": true
+        }
+      },
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:mark_variant": {
+        "value": 0
+      },
+      "minecraft:skin_id": {
+        "value": 0
+      },
+      "minecraft:variant": {
+        "value": 0
+      },
+      "minecraft:type_family": {
+        "family": [ "antenna", "bot", "BOT-Entity", "inanimate" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          { 
+            "filters": { "test": "in_block", "operator": "!=", "value": "antenna" }, 
+            "event": "despawn" 
+          }
+        ]
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:tick_world": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      }
+    },
+    "events": {
+      "do_not_show": {
+        "remove": { "component_groups": "name_always_show" }
+      },
+      "name_always_show": {
+        "add": { "component_groups": "name_always_show" }
+      },
+      "despawn": {
+        "add": { "component_groups": "despawn" }
+      },
+      "default": { },
+      "itemHopper": { },
+      "attack_target": { },
+      "attack_monsters": { }
+    }
+  }
+}

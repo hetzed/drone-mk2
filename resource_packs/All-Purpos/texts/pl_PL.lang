@@ -1,0 +1,9 @@
+item.drone:solar_panel=§bPainel solar de drone
+item.drone:remote_control=§7Controle§h remoto de drone
+tile.drone:antenna.name=§7Antena de Controle de Drone
+tile.drone:packed.name=§7Drone embalado
+
+entity.effect99:drone.name=§hDrone Multiuso
+item.spawn_egg.entity.effect99:drone.name=§hDrone Multiuso
+
+entity.unknown.name=§7Contêiner

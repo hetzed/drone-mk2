@@ -1,0 +1,16 @@
+{
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "packed_drone": {
+      "textures": [ "textures/blocks/packed_drone" ]
+    },
+    "antenna": {
+      "textures": [ "textures/blocks/antenna" ]
+    },
+    "antenna_deny": {
+      "textures": [ "textures/blocks/antenna_deny" ]
+    }
+  }
+}

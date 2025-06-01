@@ -1,0 +1,14 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/antenna",
+    "atlas_tile": "antenna",
+    "ticks_per_frame": 15,
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/packed_drone",
+    "atlas_tile": "packed_drone",
+    "ticks_per_frame": 15,
+    "blend_frames": false
+  }
+]

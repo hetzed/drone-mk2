@@ -1,0 +1,14 @@
+item.drone:solar_panel=§bDrone solar panel
+item.drone:remote_control=§7Drone remote§h control
+tile.drone:antenna.name=§7Drone Control Antenna
+tile.drone:packed.name=§7Packed drone
+
+tile.magma:broken.name=§6Magma broken
+
+gui.submit=Submit
+gui.drone_submit=Save settings
+
+entity.effect99:drone.name=§hAll-Purpose Drone
+item.spawn_egg.entity.effect99:drone.name=§hAll-Purpose Drone
+
+entity.unknown.name=§7Container

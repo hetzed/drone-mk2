@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.target.view": {
+			"loop": true,
+			"bones": {
+				"target": {
+					"scale": 1000
+				}
+			}
+		}
+	}
+}

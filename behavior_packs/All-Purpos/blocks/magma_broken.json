@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "magma:broken"
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:destructible_by_mining": false,
+      "minecraft:material_instances": {
+        "*": { "texture": "magma" }
+      },
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:custom_components": [
+        "despawn:block"
+      ],
+      "minecraft:tick": {
+        "interval_range": [ 20, 60 ]
+      },
+      "minecraft:map_color": "#FFFFFF"
+    },
+    "events": {}
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "drone:remote_control"
+    },  
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "Ci",
+      "ri",
+      "ii"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "r": {
+        "item": "minecraft:redstone"
+      },
+      "i": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "drone:remote_control",
+      "count": 1
+    }
+  }
+}

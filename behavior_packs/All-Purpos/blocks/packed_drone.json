@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "drone:packed",
+      "menu_category": {
+        "category": "Construction"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1
+      },
+      "minecraft:material_instances": {
+        "*": { "texture": "packed_drone" }
+      },
+      "minecraft:custom_components": [
+        "drone:packed"
+      ],
+      "minecraft:map_color": "#DDDDDD",
+
+      "minecraft:geometry": {
+        "identifier": "geometry.packed_drone"
+      }
+    },
+    "events": { }
+  }
+}

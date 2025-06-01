@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.initSystem": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "initSystem": "1.0" }
+          ]
+        },
+        "initSystem": {
+          "on_entry": [
+            "/tag @s remove initSystem"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.outline": {
+      "geometry": "geometry.outline",
+      "materials": [ { "*": "material.outline" } ],
+      "textures": [ "texture.state_1" ],
+      "ignore_lighting": true,
+      "overlay_color": {
+        "r": "query.property('outline:color_r')", 
+        "g": "query.property('outline:color_g')", 
+        "b": "query.property('outline:color_b')",
+        "a": 1
+      }
+    },
+    "controller.render.outline.rgb": {
+      "geometry": "geometry.outline",
+      "materials": [ { "*": "material.outline" } ],
+      "textures": [ "texture.state_1" ],
+      "ignore_lighting": true,
+      "overlay_color": {
+        "r": "math.lerp(0.0, 1.0, math.cos(query.life_time * 360.0))",
+        "g": "math.lerp(0.0, 1.0, -math.cos(query.life_time * 360.0))",
+        "b": "math.lerp(0.0, 1.0, math.sin(query.life_time * 360.0))",
+        "a": 1
+      }
+    },
+    "controller.render.outline.xp_orb": {
+      "geometry": "geometry.outline",
+      "materials": [ { "*": "material.outline" } ],
+      "textures": [ "texture.state_1" ],
+      "ignore_lighting": true,
+      "overlay_color": {
+        "r": "(Math.sin(query.life_time * 500.0) + 1.0) * 0.5",
+        "g": 1.0,
+        "b": "(Math.sin(query.life_time * 500.0 + 240.0) + 1.0) * 0.1",
+        "a": 0.8
+      }
+    },
+    "controller.render.outline.target": {
+      "geometry": "geometry.outline",
+      "materials": [ { "*": "material.outline" } ],
+      "textures": [ "texture.state_1" ],
+      "ignore_lighting": true,
+      "overlay_color": {
+        "r": "query.has_target",
+        "g": "Math.abs(query.has_target - 1.0)",
+        "b": 0,
+        "a": 1
+      }
+    },
+    "controller.render.outline.tasksRq": {
+      "geometry": "geometry.outline",
+      "materials": [ { "*": "material.highlight" } ],
+      "textures": [ "texture.state_1" ],
+      "ignore_lighting": true,
+      "overlay_color": {
+        "r": "query.skin_id == 3 ? 0 : 0.7608",
+        "g": "query.skin_id == 3 ? 0.898 : 0.3804",
+        "b": "query.skin_id == 3 ? 0.882 : 0",
+        "a": 0.3
+      }
+    }
+  }
+}

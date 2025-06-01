@@ -1,0 +1,128 @@
+{
+  "namespace": "common_buttons",
+
+  "drone_button_assets@common.button": {
+    "$default_button_texture|default": "textures/ui/button_borderless_drone",
+    "$default_content_alpha|default": 1,
+    "$hover_content_alpha|default": 1,
+    "$hover_button_texture|default": "textures/ui/button_pressed_drone",
+    "$pressed_button_texture|default": "textures/ui/button_pressed_drone",
+    "$locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
+
+    "locked_control": "locked",
+
+    "$default_font|default": "default",
+    "$font_type": "$default_font",
+    "$locked_alpha": 1
+  },
+
+  "drone_text_button@drone_button_assets": {
+    "$button_offset|default": [ 0, 0 ],
+    "$button_pressed_offset|default": [ 0, 1 ],
+    "$button_text|default": "",
+    "$button_font_size|default": "normal",
+    "$button_font_scale_factor|default": 1.0,
+    "$pressed_alpha|default": 1,
+    "$default_button_alpha|default": 0.5,
+    "$default_hover_alpha|default": 1,
+    "$default_pressed_alpha|default": 1,
+    "$default_button_pressed_offset|default": [ 0, 1 ],
+
+    "$default_text_color|default": "$light_button_default_text_color",
+    "$hover_text_color|default": "$light_button_hover_text_color",
+    "$pressed_text_color|default": "$light_button_pressed_text_color",
+
+    "$button_text_binding_type|default": "none",
+    "$button_binding_condition|default": "none",
+    "$button_text_grid_collection_name|default": "",
+
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+
+    "$default_state|default": false,
+    "$hover_state|default": false,
+    "$pressed_state|default": false,
+    "$locked_state|default": true,
+
+    "$icon_texture|default": "",
+    "$icon_texture_hover|default": "",
+    "$drone_border_color|default": [ 0.10, 0.28, 0.30 ],
+    "$drone_border_hover_color": [ 0.4, 0.91, 0.93 ],
+    "$colour|default": [ 0, 0, 0 ],
+    "$pos_text|default": [0, 0],
+    "$border|default": true,
+    "$show|default": true,
+
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "visible": "$show",
+          "text": "#form_button_text",
+          "layer": 32,
+          "color": [ 0, 0, 0 ],
+          "offset": "$pos_text",
+          "text_alignment": "center",
+          "bindings": [
+            {
+              "binding_name": "#form_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            }
+          ]
+        }
+      },
+      {
+        "image": {
+          "type": "image",
+          "layer": 10,
+          "size": [ 16, 16 ],
+          "texture": "$icon_texture"
+        }
+      },
+      {
+        "default@$button_state_panel": {
+          "$new_ui_button_texture": "$default_button_texture",
+          "$text_color": "$colour",
+          "$secondary_text_color": "$light_button_secondary_default_text_color",
+          "$content_alpha": "$default_content_alpha",
+          "$border_color": "$drone_border_color",
+          "$border_visible": "$border",
+          "$border_layer": 2,
+          "$default_state": true,
+          "$button_alpha": "$default_button_alpha",
+          "layer": 1
+        }
+      },
+      {
+        "hover@common_buttons.new_ui_button_panel": {
+          "$new_ui_button_texture": "$hover_button_texture",
+          "$text_color": "$hover_text_color",
+          "$secondary_text_color": "$light_button_secondary_hover_text_color",
+          "$content_alpha": 1,
+          "$border_color": "$drone_border_hover_color",
+          "$border_visible": "$border",
+          "$border_layer": 4,
+          "$hover_state": true,
+          "$button_alpha": "$default_hover_alpha",
+          "layer": 4
+        }
+      },
+      {
+        "pressed@$button_state_panel": {
+          "$new_ui_button_texture": "$hover_button_texture",
+          "$text_color": "$pressed_text_color",
+          "$secondary_text_color": "$light_button_secondary_pressed_text_color",
+          "$button_offset|default": "$button_pressed_offset",
+          "$content_alpha": "$pressed_alpha",
+          "$border_color": "$light_border_pressed_color",
+          "$border_visible": "$border",
+          "$border_layer": 5,
+          "$pressed_state": true,
+          "$button_alpha": "$default_pressed_alpha",
+          "layer": 5
+        }
+      }
+    ]
+  }
+}

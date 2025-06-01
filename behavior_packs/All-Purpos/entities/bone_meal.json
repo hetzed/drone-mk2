@@ -1,0 +1,55 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:bone_meal",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:grows_crop": {
+        "charges": 10,
+        "chance": 1.0
+      },
+      "minecraft:type_family": {
+        "family": [ "bone_meal", "inanimate" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "time": [ 1, 1 ],
+        "time_down_event": {
+          "event": "despawn"
+        }
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": { "component_groups": "despawn" }
+      }
+    }
+  }
+}
